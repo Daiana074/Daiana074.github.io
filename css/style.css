@@ -1,0 +1,285 @@
+/* pantallas xxl */
+@media(max-width:90em){
+  .brr{
+    display: none;
+  }
+}
+
+/* tipografia */
+@font-face{
+  font-family: roboto;
+  src: url("letra1.ttf");
+}
+
+a, button, h2, h3, p, .text1, h5, h1 ,h4, h6, em{
+  font-family: roboto !important;
+  
+}
+
+
+
+/* ---------------------- nav ---------------------- */
+.custom-bg-color {
+    background-color: #FFA500; /* Cambia  al color deseado */
+}
+
+li a:hover {
+  color: white !important;
+}
+
+.dropdown-item:hover{
+  color: #FFA500 !important;
+  
+}
+
+
+
+/*---------------------- footer ----------------------*/
+a{
+    text-decoration: none !important; 
+    font-size: 17px;
+}
+p{
+    font-size: 17px;
+}
+p a:hover{
+    color: #FFA500 !important;
+}
+h5{
+    color: #FFA500 !important;
+}
+i:hover{
+  color: #FFA500!important;
+}
+
+
+.footer{
+  text-align: center; /* Centra horizontalmente los íconos en el contenedor ul */
+  padding: 0.75rem 2rem;
+}
+.footer ul li {
+  display: inline; /* Para que los íconos se muestren en línea */
+  margin-right: 60px; /* Espacio entre los íconos */
+  
+}
+
+
+/* boton flotante */
+.ir-arriba {
+	display:none;
+	padding:20px;
+	background:#FFA500;
+  border-radius: 25rem;
+	font-size:20px;
+	color:white;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+  z-index: 1000; /* Ajusta el valor según sea necesario para que esté por encima de las tarjetas */
+}
+
+
+/* ----------------mini cards---------------- */
+h2{
+  text-align: center;
+ 
+}
+.cajas1{
+    display: flex;
+    justify-content: space-evenly;
+    
+} 
+
+.card1 {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  height: 180px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 50px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card1:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+ 
+
+   
+.text1 {
+  color: black;
+  text-align: center;
+  margin-top: 12%;
+  padding-top: 5px;
+}
+.title-cards-benefi1{
+  
+  font-size: 20px;
+}
+
+
+.img-card1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.img-benefi1{
+  width: 60px;
+  
+  
+}
+
+.title-cards-benefi1{
+  color: black;
+  padding-top: 60px;
+  text-align: center;
+}
+
+/* Estilos específicos para pantallas más pequeñas (móviles) */
+@media (max-width: 767px) {
+  .cajas1 {
+    
+      display: flex;
+      align-items: center;
+      flex-direction: column !important;
+      
+  }
+}
+
+/* ----------------cards carrusel---------------- */
+
+/* cards ofertas titulo*/
+.ofertas{
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* separacion entre cards */
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border-radius: 0;
+  text-align: center;
+
+}
+/* separacion de padding de contenedor y color de fondo */
+#cards{
+  padding: 5em;
+  background-image: linear-gradient(180deg, #ff562b 0%, #0c0026 100%);
+
+}
+
+
+/* asegura que las imágenes dentro de elementos con la clase .card tengan una 
+altura de 11 em cuando la pantalla sea igual o más ancha que 768 píxeles. */
+@media (min-width: 768px) {
+  .card img {
+      height: 11em;
+  }
+}
+
+/* Agrega el efecto de aumento al pasar el mouse sobre la imagen */
+.img-zoom:hover {
+transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+transition: transform 0.3s; /* Aplica una transición suave */
+}
+
+/* Estilo predeterminado de la tarjeta */
+.card {
+transition: transform 0.3s;
+width: 12rem; /* Ancho personalizado para las tarjetas */
+height: 12rem; /* Altura personalizada para las tarjetas */
+
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+transform: scale(1.05); /* Cambia el tamaño de la tarjeta al 105% en el hover */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Agrega una sombra en el hover */
+}
+
+/* Media query para dispositivos móviles (ancho máximo típico de dispositivos móviles) */
+@media only screen and (max-width: 767px) {
+#carouselExample {
+  display: none; /* Oculta el carrusel en dispositivos móviles */
+}
+}
+
+/* ---------------dispositivos moviles--------------- */
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  /* Muestra el carrusel solo en dispositivos móviles */
+    #carouselExample2 {
+      display: block !important;
+    }
+
+  /* Oculta el carrusel en tamaños de pantalla mayores */
+    #carouselExample2.desktop-hide {
+      display: none !important;
+    }
+
+    /* Estilos adicionales o ajustes para dispositivos móviles si es necesario */
+    .cards-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      text-align: center;
+      width: 100%; /* Puedes ajustar el ancho según tus necesidades */
+      margin: 0 auto; /* Centra horizontalmente la tarjeta */
+      transition: transform 0.3s; /* Agrega una transición al efecto hover */
+    }
+    .card:hover {
+      transform: scale(1.05); /* Ajusta la escala para el efecto hover */
+    }
+}
+
+/* Estilos para tamaños de pantalla mayores a 767px (tabletas y escritorios) */
+@media (min-width: 768px) {
+  /* Oculta el carrusel en tamaños de pantalla mayores */
+  #carouselExample2 {
+    display: none !important;
+  }
+
+  /* Muestra el carrusel solo en tamaños de pantalla mayores */
+  #carouselExample2.desktop-show {
+    display: block !important;
+  }
+
+  /* Estilos adicionales o ajustes para tamaños de pantalla mayores si es necesario */
+}
+
+#carouselExample {
+  height: 100vh; /* Ajusta este valor según tus necesidades */
+  overflow: hidden;
+}
+
+/* prop para precios */
+.precio-anterior {
+  text-decoration: line-through;
+  color: red; /* Puedes ajustar el color según tus preferencias */
+}
+
+.precio-actual {
+  color: green; /* Puedes ajustar el color según tus preferencias */
+  
+}
+.btn {
+  background-color: #FFA500 !important;
+}
+p {
+  margin-bottom: 2px !important; /* Puedes ajustar este valor según tus necesidades */
+}
